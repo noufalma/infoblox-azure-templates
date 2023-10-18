@@ -784,7 +784,8 @@
                 "createOption":"FromImage",
                 "managedDisk": {
                   "storageAccountType": "[variables('osDiskType')]"
-                }
+                },
+                "diskSizeGB": 250
               },
               "dataDisks": "[if(contains(variables('dataDiskNewOrNone'), 'new'), variables('dataDiskArray'), json('[]') )]"
             }
